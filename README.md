@@ -8,5 +8,6 @@
 
 
 
-![assiment drawio (1)](https://github.com/sajed88/hospital-management-system/assets/115458755/63b5821d-f7c6-4901-97b4-b23253cf66b3)
+
+![assiment drawio (1)](https://github.com/sajed88/hospital-management-system/assets/115458755/d7537d83-f51e-4a12-b5e0-f6cc80677b1e)
 
