@@ -1,0 +1,1231 @@
+{
+	"info": {
+		"_postman_id": "9e3baa80-c6bc-4b73-917b-933d2290113d",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26810946"
+	},
+	"item": [
+		{
+			"name": "Doctors",
+			"item": [
+				{
+					"name": "Get All Doctors",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/Doctors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Doctors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 22:33:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"doctors_id\": 1,\n        \"doctors_name\": \"ameen\",\n        \"doctors_mobile\": \"056728387\",\n        \"doctors_address\": \"baqa\"\n    },\n    {\n        \"doctors_id\": 2,\n        \"doctors_name\": \"sajed\",\n        \"doctors_mobile\": \"05987565\",\n        \"doctors_address\": \"nablus\"\n    },\n    {\n        \"doctors_id\": 5,\n        \"doctors_name\": \"ahmad khaled\",\n        \"doctors_mobile\": \"7777777\",\n        \"doctors_address\": \"Birzeit\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get doctor by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/Doctors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Doctors",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:37:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"doctors_id\": 1,\n    \"doctors_name\": \"AbdAlkareem\",\n    \"doctors_mobile\": \"0599128387\",\n    \"doctors_address\": \"Birzeit\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new doctor",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctors_name\": \"ahmad khaled\",\r\n    \"doctors_mobile\": \"7777777\",\r\n    \"doctors_address\": \"Birzeit\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/Doctors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Doctors"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:43:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"doctors_id\": 5,\n    \"doctors_name\": \"ahmad khaled\",\n    \"doctors_mobile\": \"7777777\",\n    \"doctors_address\": \"Birzeit\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update existing doctor with id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctors_id\": 1,\r\n    \"doctors_name\": \"ameen\",\r\n    \"doctors_mobile\": \"056728387\",\r\n    \"doctors_address\": \"baqa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/Doctors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Doctors",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:46:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"doctors_id\": 1,\n    \"doctors_name\": \"ameen\",\n    \"doctors_mobile\": \"056728387\",\n    \"doctors_address\": \"baqa\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete doctor by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/Doctors/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Doctors",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:47:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Deleted successfully."
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Drugs",
+			"item": [
+				{
+					"name": "Get All Drugs",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/Drugs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Drugs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:49:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"drug_id\": 1,\n        \"drug_name\": \"Hallucinogens\",\n        \"price\": 20,\n        \"drug_description\": \"---\",\n        \"drug_company\": \"AbbVie\",\n        \"report_id\": 1\n    },\n    {\n        \"drug_id\": 2,\n        \"drug_name\": \"Ayahuasca\",\n        \"price\": 60,\n        \"drug_description\": \"---\",\n        \"drug_company\": \"Abbott Nutrition\",\n        \"report_id\": 2\n    },\n    {\n        \"drug_id\": 4,\n        \"drug_name\": \"GHB\",\n        \"price\": 80,\n        \"drug_description\": \"---\",\n        \"drug_company\": \"Genentech\",\n        \"report_id\": 2\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Drugs by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/Drugs/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Drugs",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:49:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"drug_id\": 1,\n    \"drug_name\": \"Hallucinogens\",\n    \"price\": 20,\n    \"drug_description\": \"---\",\n    \"drug_company\": \"AbbVie\",\n    \"report_id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new Drugs",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"drug_name\": \"GHB\",\r\n    \"price\": 50,\r\n    \"drug_description\": \"---\",\r\n    \"drug_company\": \"Genen\",\r\n    \"report_id\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/Drugs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Drugs"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:51:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"drug_id\": 5,\n    \"drug_name\": \"GHB\",\n    \"price\": 50,\n    \"drug_description\": \"---\",\n    \"drug_company\": \"Genen\",\n    \"report_id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Update existing  Drugs with id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"drug_id\": 1,\r\n    \"drug_name\": \"Hallucinogens\",\r\n    \"price\": 15,\r\n    \"drug_description\": \"---\",\r\n    \"drug_company\": \"Vie\",\r\n    \"report_id\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/Drugs/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Drugs",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:53:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"drug_id\": 1,\n    \"drug_name\": \"Hallucinogens\",\n    \"price\": 15,\n    \"drug_description\": \"---\",\n    \"drug_company\": \"Vie\",\n    \"report_id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete drugs by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/Drugs/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Drugs",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:53:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Deleted successfully."
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Get All patient",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/Patient",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Patient"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:54:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"patient_id\": 1,\n        \"patient_name\": \"hamza\",\n        \"patient_mobile\": \"8888888\",\n        \"patient_address\": \"haja\"\n    },\n    {\n        \"patient_id\": 2,\n        \"patient_name\": \"baker\",\n        \"patient_mobile\": \"059912846\",\n        \"patient_address\": \"ramallh\"\n    },\n    {\n        \"patient_id\": 4,\n        \"patient_name\": \"tariq\",\n        \"patient_mobile\": \"059912999\",\n        \"patient_address\": \"baqa\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get patient by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/Patient/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Patient",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:55:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"patient_id\": 1,\n    \"patient_name\": \"hamza\",\n    \"patient_mobile\": \"8888888\",\n    \"patient_address\": \"haja\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new patient",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"patient_name\": \"abdallah\",\r\n    \"patient_mobile\": \"222222222\",\r\n    \"patient_address\": \"jinin\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/Patient",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Patient"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:56:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"patient_id\": 5,\n    \"patient_name\": \"abdallah\",\n    \"patient_mobile\": \"222222222\",\n    \"patient_address\": \"jinin\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update patient With id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"patient_id\": 2,\r\n    \"patient_name\": \"saji\",\r\n    \"patient_mobile\": \"444444\",\r\n    \"patient_address\": \"nablus\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/Patient/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Patient",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:58:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"patient_id\": 2,\n    \"patient_name\": \"saji\",\n    \"patient_mobile\": \"444444\",\n    \"patient_address\": \"nablus\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete patient by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/Patient/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Patient",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:59:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Deleted successfully."
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Get All Report",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/Report",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Report"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 21:59:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"report_id\": 1,\n        \"report_name\": \"web5\",\n        \"patient_id\": 1,\n        \"doctors_id\": 1,\n        \"drugs_id\": 1\n    },\n    {\n        \"report_id\": 2,\n        \"report_name\": \"web2\",\n        \"patient_id\": 2,\n        \"doctors_id\": 2,\n        \"drugs_id\": 2\n    },\n    {\n        \"report_id\": 3,\n        \"report_name\": \"web3\",\n        \"patient_id\": 3,\n        \"doctors_id\": 3,\n        \"drugs_id\": 3\n    },\n    {\n        \"report_id\": 4,\n        \"report_name\": \"web4\",\n        \"patient_id\": 3,\n        \"doctors_id\": 3,\n        \"drugs_id\": 3\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get report by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/Report/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Report",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 22:00:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"report_id\": 2,\n    \"report_name\": \"web2\",\n    \"patient_id\": 2,\n    \"doctors_id\": 2,\n    \"drugs_id\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new report",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"report_name\": \"web7\",\r\n    \"patient_id\": 3,\r\n    \"doctors_id\": 3,\r\n    \"drugs_id\": 3\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/Report",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Report"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 22:01:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"report_id\": 5,\n    \"report_name\": \"web7\",\n    \"patient_id\": 3,\n    \"doctors_id\": 3,\n    \"drugs_id\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "Update existing report with id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"report_id\": 3,\r\n    \"report_name\": \"web8\",\r\n    \"patient_id\": 2,\r\n    \"doctors_id\": 1,\r\n    \"drugs_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/Report/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Report",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 22:02:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"report_id\": 3,\n    \"report_name\": \"web8\",\n    \"patient_id\": 2,\n    \"doctors_id\": 1,\n    \"drugs_id\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete report by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/Report/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"Report",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 22:03:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Deleted successfully."
+						}
+					]
+				}
+			]
+		}
+	]
+}
